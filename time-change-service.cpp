@@ -11,7 +11,7 @@ SERVICE_STATUS_HANDLE g_StatusHandle = NULL;
 HANDLE g_ServiceStopEvent = NULL;
 
 void LogEvent(const std::wstring& message) {
-    std::wofstream logFile("TimeChangeService.log", std::ios::app);
+    std::wofstream logFile("TimeChangeService.log", std::ios::app); // file can be found at c:\Windows\System32\TImeChangeService.txt
     if (logFile.is_open()) {
         logFile << message << std::endl;
     }
